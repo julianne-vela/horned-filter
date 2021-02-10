@@ -5,7 +5,7 @@ export default class ImageItem extends Component {
         return (
             <li className='ImageItem'>
                 {this.props.image.title}
-                <img alt='horned beast' src={this.props.image.url} />
+                <img alt={this.props.image.description} src={this.props.image.url} />
             </li>
         )
     }

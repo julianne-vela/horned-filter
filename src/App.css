@@ -3,6 +3,18 @@ img {
   height: 100px;
 }
 
+form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+}
+
 .ImageList {
   display: flex;
   flex-wrap: wrap;
