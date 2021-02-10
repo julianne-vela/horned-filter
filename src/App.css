@@ -3,6 +3,22 @@ img {
   height: 100px;
 }
 
+.ImageList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ImageItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border: solid 1px black;
+  margin: 5px;
+}
+
 li {
   list-style-type: none;
 }
