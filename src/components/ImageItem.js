@@ -12,7 +12,7 @@ export default class ImageItem extends Component {
 
         return (
             <li className='ImageItem'>
-                {title}
+                <label className='label'>{title}</label>
                 <img alt={description} src={url} />
             </li>
         )
