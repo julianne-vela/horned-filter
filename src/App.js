@@ -23,6 +23,16 @@ export default class App extends React.Component {
     })
   }
 
+  uniqueKeywords = Array.from(new Set(images.map(image => {
+    Object.keys(image)
+    return image.keyword
+  })))
+  uniqueHorns = Array.from(new Set(images.map(image => {
+    Object.keys(image)
+    return image.horns
+  })))
+
+
   render() {
     const { keyword, horns } = this.state;
 
@@ -34,21 +44,19 @@ export default class App extends React.Component {
       return false;
     });
 
-    let uniqueKeywords = Array.from(new Set(images.map(image => {
-      Object.keys(image)
-      return image.keyword
-    })))
-
-    console.log(uniqueKeywords);
-
     return (
       <>
         <Header />
-        <DropDown currentValue={this.state.keyword}
+        <DropDown currentValue={keyword}
           handleChange={this.handleKeywordChange}
-          options={uniqueKeywords}
+          options={this.uniqueKeywords}
+          label='Species'
         />
-        < DropDown />
+        < DropDown currentValue={horns}
+          handleChange={this.handleHornsChange}
+          options={this.uniqueHorns}
+          label='Number of Horns'
+        />
         <ImageList filteredImages={filteredImages} />
       </>
     )
