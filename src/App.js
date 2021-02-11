@@ -1,5 +1,8 @@
 import React from 'react';
 import './components/stylesheets/App.css';
+import './components/stylesheets/Header.css';
+import './components/stylesheets/ImageItem.css';
+import './components/stylesheets/DropDown.css';
 import images from './data/data.js';
 import ImageList from './components/ImageList';
 import Header from './components/Header.js';
@@ -46,17 +49,21 @@ export default class App extends React.Component {
 
     return (
       <>
-        <Header />
-        <DropDown currentValue={keyword}
-          handleChange={this.handleKeywordChange}
-          options={this.uniqueKeywords}
-          label='Species'
-        />
-        < DropDown currentValue={horns}
-          handleChange={this.handleHornsChange}
-          options={this.uniqueHorns}
-          label='Number of Horns'
-        />
+        <Header className='header' />
+        <div className='dropDown'>
+          <DropDown className='dropDown'
+            currentValue={keyword}
+            handleChange={this.handleKeywordChange}
+            options={this.uniqueKeywords}
+            label='Species'
+          />
+          < DropDown className='dropDown'
+            currentValue={horns}
+            handleChange={this.handleHornsChange}
+            options={this.uniqueHorns}
+            label='Number of Horns'
+          />
+        </div>
         <ImageList filteredImages={filteredImages} />
       </>
     )

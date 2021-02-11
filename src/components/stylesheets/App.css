@@ -1,34 +1,20 @@
+@font-face {
+  font-family: StalinistOne-Regular;
+  src: url('../../fonts/StalinistOne-Regular.ttf')
+}
+
+body {
+  font-family: StalinistOne-Regular;
+}
+
 img {
-  width: 100px;
-  height: 100px;
-}
-
-form {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  width: 15em;
+  width: 300px;
+  height: 300px;
 }
 
 .ImageList {
   display: flex;
   flex-wrap: wrap;
-}
-
-.ImageItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  border: solid 1px black;
-  margin: 5px;
 }
 
 li {

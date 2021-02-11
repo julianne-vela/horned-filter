@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
+import './stylesheets/DropDown.css';
 
 export default class DropDown extends Component {
     render() {
         const { currentValue, handleChange, options, label } = this.props
 
         return (
-            <div>
+            <div className='dropDown'>
                 <fieldset>
                     <legend>{label}</legend>
-                    <select value={currentValue}
+                    <select className='options'
+                        value={currentValue}
                         onChange={handleChange}
                     >
                         <option value=''>None</option>
